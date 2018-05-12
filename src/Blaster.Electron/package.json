@@ -1,0 +1,21 @@
+{
+  "name": "blaster.electron",
+  "version": "1.0.0",
+  "description": "Blazor integration for Electron",
+  "main": "_dist\\index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "2.0.0",
+    "typescript": "^2.8.3"
+  },
+  "scripts": {
+    "test": "test",
+    "build": "build"
+  },
+  "keywords": [
+    "Blazor",
+    "Electron"
+  ],
+  "author": "Manuel Grundner",
+  "license": "MIT"
+}
