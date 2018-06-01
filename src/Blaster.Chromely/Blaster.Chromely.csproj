@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <ApplicationIcon />
+    <StartupObject />
+    <RuntimeIdentifiers>win10-x64;ubuntu.16.10-x64</RuntimeIdentifiers>
+    <Platforms>x64</Platforms>
+    <TrimUnusedDependencies>true</TrimUnusedDependencies>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Chromely.CefGlue.Winapi" Version="65.0.0" />
+    <PackageReference Include="Chromely.Unofficial.CefGlue.NetStd" Version="65.0.3325.181" />
+    <!--<PackageReference Include="Microsoft.Packaging.Tools.Trimming" Version="1.1.0-preview1-25818-01" />-->
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Blaster.Blazor\Blaster.Blazor.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="_dist\netstandard2.0\dist\*.*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="_dist\netstandard2.0\dist\_framework\*.*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="_dist\netstandard2.0\dist\_framework\_bin\*.*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="_dist\netstandard2.0\dist\_framework\asmjs\*.*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="_dist\netstandard2.0\dist\_framework\wasm\*.*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
