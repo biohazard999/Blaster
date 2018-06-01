@@ -1,5 +1,5 @@
 # Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+This project tries to get the power of [blazor](https://blazor.net/) to the desktop.
 
 # Getting Started
 TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
