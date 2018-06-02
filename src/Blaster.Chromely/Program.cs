@@ -1,13 +1,9 @@
-﻿using Blaster.Chromely.Handlers;
+﻿using System;
+using Blaster.Chromely.Handlers;
 using Chromely.CefGlue.Winapi;
-using Chromely.CefGlue.Winapi.Browser.Handlers;
 using Chromely.CefGlue.Winapi.ChromeHost;
 using Chromely.Core;
 using Chromely.Core.Helpers;
-using Chromely.Core.Infrastructure;
-using System;
-using System.IO;
-using System.Reflection;
 using WinApi.Windows;
 
 namespace Blaster.Chromely
@@ -32,7 +28,7 @@ namespace Blaster.Chromely
 
                                           // Alternate approach for multi-process, is to add a subprocess application
                                           //.WithCustomSetting(CefSettingKeys.BrowserSubprocessPath, path_to_sunprocess)
-                                          .RegisterCustomHandler(CefHandlerKey.)
+                                          .RegisterCustomHandler(CefHandlerKey.LifeSpanHandler, typeof(BlasterLifeSpanHandler))
                                           .WithCustomSetting(CefSettingKeys.SingleProcess, true)
                                           .WithStartUrl(startUrl);
 
