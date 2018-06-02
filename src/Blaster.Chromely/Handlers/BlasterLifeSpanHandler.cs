@@ -1,9 +1,4 @@
-﻿using Chromely.CefGlue.Winapi.ChromeHost;
-using Chromely.Core;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using WinApi.Windows;
+﻿using System;
 using Xilium.CefGlue;
 
 namespace Blaster.Chromely.Handlers
