@@ -24,15 +24,15 @@ The following build referes to `build.cmd` on windows, for macos/linux use `./bu
 * `build run`: Builds and runs the project in `Debug` configuration
 
 # Roadmap
-[ ] Get dotnet standard working without [build script](https://github.com/biohazard999/Blaster/blob/master/build.cake) ([dotnet run](https://github.com/mattkol/Chromely/issues/30))
-[ ] Get [Linux support running](https://github.com/mattkol/Chromely/issues/30)
-[ ] Get [Mac support running](https://github.com/mattkol/Chromely/wiki/Roadmap-and-Help-Wanted)
-[ ] Debug support
-[ ] Call Server function from client with ease (Strongly typed) aka. `GetBackendService<T>()`.
-[ ] Investigate multi process server.
-[ ] Create a Logo.
-[ ] Add Templates.
-[ ] Hot reload.
+- [ ] Get dotnet standard working without [build script](https://github.com/biohazard999/Blaster/blob/master/build.cake) ([dotnet run](https://github.com/mattkol/Chromely/issues/30))
+- [ ] Get [Linux support running](https://github.com/mattkol/Chromely/issues/30)
+- [ ] Get [Mac support running](https://github.com/mattkol/Chromely/wiki/Roadmap-and-Help-Wanted)
+- [ ] Debug support
+- [ ] Call Server function from client with ease (Strongly typed) aka. `GetBackendService<T>()`.
+- [ ] Investigate multi process server.
+- [ ] Create a Logo.
+- [ ] Add Templates.
+- [ ] Hot reload.
 
 # Contribute
 Feel free to file an issue, send a PR, [grab a up for grabs](https://up-for-grabs.net/)
