@@ -13,7 +13,7 @@
     <TrimUnusedDependencies>true</TrimUnusedDependencies>-->
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Chromely.Cef.Redist" Version="65.0.*" />
+    <PackageReference Include="Chromely.Cef.Redist.Windows" Version="65.0.*" />
     <PackageReference Include="Chromely.CefGlue.Winapi" Version="65.0.0" />
     <PackageReference Include="Chromely.Unofficial.CefGlue.NetStd" Version="65.0.3325.181" />
     <!--<PackageReference Include="Microsoft.Packaging.Tools.Trimming" Version="1.1.0-preview1-25818-01" />-->
