@@ -14,8 +14,7 @@ namespace Blaster.Blazor
                 // Add any custom services here
             });
 
-            new BrowserRenderer(serviceProvider)
-                .AddComponent<App>("app");
+            new BrowserRenderer(serviceProvider).AddComponent<App>("app");
         }
     }
 }

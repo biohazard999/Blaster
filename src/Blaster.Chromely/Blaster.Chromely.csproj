@@ -8,9 +8,7 @@
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     <ApplicationIcon />
     <StartupObject />
-    <!--<RuntimeIdentifiers>win10-x64;ubuntu.16.10-x64</RuntimeIdentifiers>
-    <Platforms>x64</Platforms>
-    <TrimUnusedDependencies>true</TrimUnusedDependencies>-->
+    <TrimUnusedDependencies>true</TrimUnusedDependencies>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Chromely.Cef.Redist.Windows" Version="65.0.*" />
@@ -18,20 +16,27 @@
     <PackageReference Include="Chromely.Unofficial.CefGlue.NetStd" Version="65.0.3325.181" />
     <!--<PackageReference Include="Microsoft.Packaging.Tools.Trimming" Version="1.1.0-preview1-25818-01" />-->
   </ItemGroup>
-
   <ItemGroup>
+    <BlasterProject Include="..\Blaster.Blazor\wwwroot\**\*.*" />
     <ProjectReference Include="..\Blaster.Blazor\Blaster.Blazor.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <BlazorFiles Include="..\Blaster.Blazor\bin\Release\netstandard2.0\publish\Blaster.Blazor\dist\**\*.*" />
+    <BlazorFiles Include="..\Blaster.Blazor\bin\$(Configuration)\netstandard2.0\dist\**\*.*" />
+  </ItemGroup>
+  <ItemGroup Condition="('$(Configuration)' == 'Debug') OR ('$(Configuration)' == 'Release')">
+    <Content Include="@(BlasterProject)">
+      <Link>_dist\%(RecursiveDir)%(FileName)%(Extension)</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Visible>false</Visible>
+      <InProject>false</InProject>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="@(BlazorFiles)">
       <Link>_dist\%(RecursiveDir)%(FileName)%(Extension)</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <Visible>False</Visible>
-      <InProject>True</InProject>
+      <Visible>false</Visible>
+      <InProject>false</InProject>
     </Content>
   </ItemGroup>
-
 </Project>

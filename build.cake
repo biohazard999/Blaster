@@ -1,5 +1,18 @@
 var target = string.IsNullOrEmpty(Argument("target", "Default")) ? "Default" : Argument("target", "Default");
 
+Task("Clean.Force")
+    .IsDependentOn("Clean")
+    .Does(() => 
+    {
+        var settings = new DeleteDirectorySettings
+        {
+            Recursive = true,
+            Force = true
+        };
+        DeleteDirectories(GetDirectories("./src/**/obj"), settings);
+        DeleteDirectories(GetDirectories("./src/**/bin"), settings);
+    });
+
 Task("Clean")
     .Does(() => DotNetCoreClean("./src/Blaster.sln"));
 

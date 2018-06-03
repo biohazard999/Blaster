@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blaster.Blazor", "Blaster.Blazor\Blaster.Blazor.csproj", "{19152613-9816-4117-BCAD-98BF150AF5A9}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blaster.Chromely", "Blaster.Chromely\Blaster.Chromely.csproj", "{C361DB55-AE77-416F-A24D-A9DA1E35B9BC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".proj", ".proj", "{CCA170A6-0CDC-4945-8F3B-8A49302F65DD}"
@@ -12,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".proj", ".proj", "{CCA170A6
 		..\.gitignore = ..\.gitignore
 		..\README.md = ..\README.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blaster.Blazor", "Blaster.Blazor\Blaster.Blazor.csproj", "{F69C64E4-81C2-4882-A2AA-EC823590794F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,18 +23,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{19152613-9816-4117-BCAD-98BF150AF5A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{19152613-9816-4117-BCAD-98BF150AF5A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{19152613-9816-4117-BCAD-98BF150AF5A9}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{19152613-9816-4117-BCAD-98BF150AF5A9}.Debug|x64.Build.0 = Debug|Any CPU
-		{19152613-9816-4117-BCAD-98BF150AF5A9}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{19152613-9816-4117-BCAD-98BF150AF5A9}.Debug|x86.Build.0 = Debug|Any CPU
-		{19152613-9816-4117-BCAD-98BF150AF5A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{19152613-9816-4117-BCAD-98BF150AF5A9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{19152613-9816-4117-BCAD-98BF150AF5A9}.Release|x64.ActiveCfg = Release|Any CPU
-		{19152613-9816-4117-BCAD-98BF150AF5A9}.Release|x64.Build.0 = Release|Any CPU
-		{19152613-9816-4117-BCAD-98BF150AF5A9}.Release|x86.ActiveCfg = Release|Any CPU
-		{19152613-9816-4117-BCAD-98BF150AF5A9}.Release|x86.Build.0 = Release|Any CPU
 		{C361DB55-AE77-416F-A24D-A9DA1E35B9BC}.Debug|Any CPU.ActiveCfg = Debug|x64
 		{C361DB55-AE77-416F-A24D-A9DA1E35B9BC}.Debug|x64.ActiveCfg = Debug|x64
 		{C361DB55-AE77-416F-A24D-A9DA1E35B9BC}.Debug|x64.Build.0 = Debug|x64
@@ -43,6 +31,18 @@ Global
 		{C361DB55-AE77-416F-A24D-A9DA1E35B9BC}.Release|x64.ActiveCfg = Release|x64
 		{C361DB55-AE77-416F-A24D-A9DA1E35B9BC}.Release|x64.Build.0 = Release|x64
 		{C361DB55-AE77-416F-A24D-A9DA1E35B9BC}.Release|x86.ActiveCfg = Release|x64
+		{F69C64E4-81C2-4882-A2AA-EC823590794F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F69C64E4-81C2-4882-A2AA-EC823590794F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F69C64E4-81C2-4882-A2AA-EC823590794F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F69C64E4-81C2-4882-A2AA-EC823590794F}.Debug|x64.Build.0 = Debug|Any CPU
+		{F69C64E4-81C2-4882-A2AA-EC823590794F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F69C64E4-81C2-4882-A2AA-EC823590794F}.Debug|x86.Build.0 = Debug|Any CPU
+		{F69C64E4-81C2-4882-A2AA-EC823590794F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F69C64E4-81C2-4882-A2AA-EC823590794F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F69C64E4-81C2-4882-A2AA-EC823590794F}.Release|x64.ActiveCfg = Release|Any CPU
+		{F69C64E4-81C2-4882-A2AA-EC823590794F}.Release|x64.Build.0 = Release|Any CPU
+		{F69C64E4-81C2-4882-A2AA-EC823590794F}.Release|x86.ActiveCfg = Release|Any CPU
+		{F69C64E4-81C2-4882-A2AA-EC823590794F}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
