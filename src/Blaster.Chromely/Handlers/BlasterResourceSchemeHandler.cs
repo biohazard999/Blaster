@@ -84,13 +84,13 @@ namespace Blaster.Chromely.Handlers
 
             if (File.Exists(file))
             {
-                Task.Factory.StartNew(() =>
+                Task.Factory.StartNew(async () =>
                 {
                     using (callback)
                     {
                         try
                         {
-                            this.mFileBytes = File.ReadAllBytes(file);
+                            this.mFileBytes = await File.ReadAllBytesAsync(file);
 
                             string extension = Path.GetExtension(file);
                             Log.Info(extension);
