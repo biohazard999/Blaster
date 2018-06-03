@@ -23,10 +23,22 @@ The following build referes to `build.cmd` on windows, for macos/linux use `./bu
 * `build restore`: Restores the `nuget` dependencies.
 * `build run`: Builds and runs the project in `Debug` configuration
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+# Roadmap
+[ ] Get dotnet standard working without [build script](https://github.com/biohazard999/Blaster/blob/master/build.cake) ([dotnet run](https://github.com/mattkol/Chromely/issues/30))
+[ ] Get [Linux support running](https://github.com/mattkol/Chromely/issues/30)
+[ ] Get [Mac support running](https://github.com/mattkol/Chromely/wiki/Roadmap-and-Help-Wanted)
+[ ] Debug support
+[ ] Call Server function from client with ease (Strongly typed) aka. `GetBackendService<T>()`.
+[ ] Investigate multi process server.
+[ ] Create a Logo.
+[ ] Add Templates.
+[ ] Hot reload.
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://www.visualstudio.com/en-us/docs/git/create-a-readme). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
+# Contribute
+Feel free to file an issue, send a PR, [grab a up for grabs](https://up-for-grabs.net/)
+Have a quick question? Wanna chat? Connect on [![Join the chat at https://gitter.im/BlasterBlazor/Lobby](https://badges.gitter.im/BlasterBlazor/Lobby.svg)](https://gitter.im/BlasterBlazor/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
+- [Chromely](https://github.com/mattkol/Chromely)
+- [Blazor](https://blazor.net/)
 - [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+- [.NET Core 2.1 SDK](https://www.microsoft.com/net/download/)
