@@ -64,7 +64,7 @@ namespace Blaster.Chromely.Handlers
         protected override bool ProcessRequest(CefRequest request, CefCallback callback)
         {
             //var baseRelative = _baseDir.Replace("\\", "/");
-            var u = new Uri(request.Url);
+            var u = new Uri(request.Url == _baseUri ? request.Url + "index.html" : request.Url);
 
             var file = Path.Join(AppDomain.CurrentDomain.BaseDirectory, _appDirectory, u.AbsolutePath);
 
@@ -155,7 +155,9 @@ namespace Blaster.Chromely.Handlers
             try
             {
                 var headers = response.GetHeaderMap();
-                headers.Add("Access-Control-Allow-Origin", "*");
+                //headers.Add("Access-Control-Allow-Origin", "*");
+                headers.Add("Accept-Ranges", "bytes");
+                headers.Add("Content-Lenght", this.mFileBytes.Length.ToString());
                 response.SetHeaderMap(headers);
 
                 response.Status = (int)HttpStatusCode.OK;

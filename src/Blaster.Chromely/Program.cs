@@ -13,12 +13,13 @@ namespace Blaster.Chromely
         static int Main(string[] args)
         {
             HostHelpers.SetupDefaultExceptionHandlers();
-            
-            var startUrl = $"http://blaster.local/index.html";
+
+            var startUrl = $"http://blaster.local/";
+            //var startUrl = "http://localhost:8080/index.html";
 
             ChromelyConfiguration config = ChromelyConfiguration
                                           .Create()
-                                          .RegisterSchemeHandler("http", "blaster.local", new BlasterSchemeHandlerFactory("http://blaster.local", "_dist/"))
+                                          .RegisterSchemeHandler("http", "blaster.local", new BlasterSchemeHandlerFactory("http://blaster.local/", "_dist/"))
                                           .WithAppArgs(args)
                                           
                                           .WithHostSize(1000, 600)

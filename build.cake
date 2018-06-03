@@ -17,7 +17,7 @@ Task("Build")
     });
 
 Task("Run")
-    .IsDependentOn("Restore")
+    .IsDependentOn("Build")
     .Does(() =>
     {
         DotNetCoreBuild("./src/Blaster.Blazor/Blaster.Blazor.csproj", new DotNetCoreBuildSettings
