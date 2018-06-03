@@ -5,6 +5,7 @@
 
 dist/
 tools/
+GPUCache/
 
 # User-specific files
 *.suo
