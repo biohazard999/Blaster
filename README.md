@@ -36,6 +36,12 @@ The following build referes to `build.cmd` on windows, for macos/linux use `./bu
 - [ ] Setup build server.
 - [ ] Setup nugets.
 
+# Goals
+- [ ] Call server side services with super ease and be strongly typed, so ui is not blocked and does ui stuff
+- [ ] Be fully cross platform
+- [ ] Make deployment easy and reliable
+- [ ] Lean, compact and fast
+
 # Contribute
 Feel free to file an issue, send a PR, [grab a up for grabs](https://up-for-grabs.net/)  
 Have a quick question? Wanna chat? Connect on [![Join the chat at https://gitter.im/BlasterBlazor/Lobby](https://badges.gitter.im/BlasterBlazor/Lobby.svg)](https://gitter.im/BlasterBlazor/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
