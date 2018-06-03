@@ -3,6 +3,8 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp2.1</TargetFramework>
+    <RuntimeIdentifiers>win-x64;win-x32;ubuntu.16.10-x64</RuntimeIdentifiers>
+    <Platforms>x64;x86</Platforms>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     <ApplicationIcon />
     <StartupObject />
@@ -11,6 +13,7 @@
     <TrimUnusedDependencies>true</TrimUnusedDependencies>-->
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="Chromely.Cef.Redist" Version="65.0.*" />
     <PackageReference Include="Chromely.CefGlue.Winapi" Version="65.0.0" />
     <PackageReference Include="Chromely.Unofficial.CefGlue.NetStd" Version="65.0.3325.181" />
     <!--<PackageReference Include="Microsoft.Packaging.Tools.Trimming" Version="1.1.0-preview1-25818-01" />-->
@@ -19,65 +22,16 @@
   <ItemGroup>
     <ProjectReference Include="..\Blaster.Blazor\Blaster.Blazor.csproj" />
   </ItemGroup>
-
   <ItemGroup>
-    <None Update="_dist\netstandard2.0\dist\*.*">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="_dist\netstandard2.0\dist\_framework\*.*">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="_dist\netstandard2.0\dist\_framework\_bin\*.*">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="_dist\netstandard2.0\dist\_framework\asmjs\*.*">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="_dist\netstandard2.0\dist\_framework\wasm\*.*">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="_dist\netstandard2.0\publish\*.*">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="_dist\netstandard2.0\publish\Blaster.Blazor\*.*">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="_dist\netstandard2.0\publish\Blaster.Blazor\dist\*.*">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="_dist\netstandard2.0\publish\Blaster.Blazor\dist\_framework\*.*">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="_dist\netstandard2.0\publish\Blaster.Blazor\dist\_framework\_bin\*.*">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="_dist\netstandard2.0\publish\Blaster.Blazor\dist\_framework\asmjs\*.*">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="_dist\netstandard2.0\publish\Blaster.Blazor\dist\_framework\wasm\*.*">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="_dist\netstandard2.0\publish\Blaster.Blazor\dist\css\*.*">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="_dist\netstandard2.0\publish\Blaster.Blazor\dist\css\bootstrap\*.*">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="_dist\netstandard2.0\publish\Blaster.Blazor\dist\css\open-iconic\*.*">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="_dist\netstandard2.0\publish\Blaster.Blazor\dist\css\open-iconic\font\*.*">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="_dist\netstandard2.0\publish\Blaster.Blazor\dist\css\open-iconic\font\css\*.*">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="_dist\netstandard2.0\publish\Blaster.Blazor\dist\css\open-iconic\font\fonts\*.*">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="_dist\netstandard2.0\publish\Blaster.Blazor\dist\sample-data\*.*">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <BlazorFiles Include="..\Blaster.Blazor\bin\Release\netstandard2.0\publish\Blaster.Blazor\dist\**\*.*" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="@(BlazorFiles)">
+      <Link>_dist\%(RecursiveDir)%(FileName)%(Extension)</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Visible>False</Visible>
+      <InProject>True</InProject>
+    </Content>
   </ItemGroup>
 
 </Project>

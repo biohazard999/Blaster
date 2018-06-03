@@ -49,8 +49,6 @@ namespace Blaster.Chromely.Handlers
             _appDirectory = appDirectory;
         }
 
-        private static string first;
-
         /// <summary>
         /// The process request.
         /// </summary>

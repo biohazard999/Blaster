@@ -18,7 +18,7 @@ namespace Blaster.Chromely
 
             ChromelyConfiguration config = ChromelyConfiguration
                                           .Create()
-                                          .RegisterSchemeHandler("http", "blaster.local", new BlasterSchemeHandlerFactory("http://blaster.local", "_dist/netstandard2.0/publish/Blaster.Blazor/dist/"))
+                                          .RegisterSchemeHandler("http", "blaster.local", new BlasterSchemeHandlerFactory("http://blaster.local", "_dist/"))
                                           .WithAppArgs(args)
                                           
                                           .WithHostSize(1000, 600)
