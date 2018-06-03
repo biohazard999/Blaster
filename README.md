@@ -24,7 +24,7 @@ The following build referes to `build.cmd` on windows, for macos/linux use `./bu
 * `build run`: Builds and runs the project in `Debug` configuration
 
 # Roadmap
-- [ ] Get dotnet standard working without [build script](https://github.com/biohazard999/Blaster/blob/master/build.cake) ([dotnet run](https://github.com/mattkol/Chromely/issues/30))
+- [ ] Get dotnet core working without [build script](https://github.com/biohazard999/Blaster/blob/master/build.cake) ([dotnet run](https://github.com/mattkol/Chromely/issues/30))
 - [ ] Get [Linux support running](https://github.com/mattkol/Chromely/issues/30)
 - [ ] Get [Mac support running](https://github.com/mattkol/Chromely/wiki/Roadmap-and-Help-Wanted)
 - [ ] Debug support
