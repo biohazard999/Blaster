@@ -1,4 +1,7 @@
 # Introduction 
+
+[![Join the chat at https://gitter.im/BlasterBlazor/Lobby](https://badges.gitter.im/BlasterBlazor/Lobby.svg)](https://gitter.im/BlasterBlazor/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 This project tries to get the power of [blazor](https://blazor.net/) to the desktop.
 
 # Getting Started
