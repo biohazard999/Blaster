@@ -33,6 +33,8 @@ The following build referes to `build.cmd` on windows, for macos/linux use `./bu
 - [ ] Create a Logo.
 - [ ] Add Templates.
 - [ ] Hot reload.
+- [ ] Setup build server.
+- [ ] Setup nugets.
 
 # Contribute
 Feel free to file an issue, send a PR, [grab a up for grabs](https://up-for-grabs.net/)  
