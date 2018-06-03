@@ -20,9 +20,10 @@ Task("Run")
     .IsDependentOn("Build")
     .Does(() =>
     {
-        DotNetCoreBuild("./src/Blaster.Blazor/Blaster.Blazor.csproj", new DotNetCoreBuildSettings
+        DotNetCorePublish("./src/Blaster.Blazor/Blaster.Blazor.csproj", new DotNetCorePublishSettings
         {
             NoRestore = true,            
+            Configuration = "Release",
         });
 
         DotNetCoreBuild("./src/Blaster.sln", new DotNetCoreBuildSettings
